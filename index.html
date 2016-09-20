@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/bulma.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <title>PomoTODO</title>
+</head>
+
+<body>
+
+    <div class="timer" data-seconds-left="5">
+        <!-- <div class="hours">00:</div> -->
+        <div class="minutes">00:</div>
+        <div class="seconds">05</div>
+        <div class="clearDiv"></div>
+        <input type="button" value="Timer Start" class="button is-large timer-start" />
+    </div>
+
+    <div class="todo-add-area">
+        <br/>
+        <input type="text" id="taskName" />
+        <input type="button" value="+" id="btn-add-task" class="button is-mid is-outlined" />
+        <input type="button" value="削除" id="btn-clear-task" />
+    </div>
+
+    <hr/>
+
+    <div>
+        <table id="tbl-todo">
+            <tbody>
+                <tr><td class='task-number'></td><td class='taskName'></td><td class='doneButton'></td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="js/jquery_after.js"></script>
+    <script src="js/jquery.simple.timer.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

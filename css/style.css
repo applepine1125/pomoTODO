@@ -1,0 +1,72 @@
+.hours {
+    float: left;
+    font-size: 80pt;
+    margin-left: 5px;
+}
+
+.minutes {
+    float: left;
+    font-size: 80pt;
+    margin-left: 5px;
+}
+
+.seconds {
+    float: left;
+    font-size: 80pt;
+    margin-left: 5px;
+}
+
+.timer {
+    margin: auto;
+    text-align: center;
+}
+
+.timer-start {
+    background-color: transparent;
+    border-color: #ff4500;
+    color: #ff4500;
+}
+
+.timer-start:hover {
+    background-color: #ff4500;
+    border-color: transparent;
+    color: white;
+}
+
+.todo-add-area {
+    font-size: 16pt;
+    margin-left: 5px;
+}
+
+#btn-add-task {
+    background-color: transparent;
+    border-color: #ff4500;
+    color: #ff4500;
+}
+
+#btn-add-task:hover {
+    background-color: #ff4500;
+    border-color: transparent;
+    color: white;
+}
+
+table {
+    border-collapse: separate;
+    table-layout: fixed;
+    border-spacing: 10px;
+    font-size: 14pt;
+    width: 290px;
+}
+
+.task-number {
+    width: 30px;
+}
+
+.taskName {
+    width: 160px;
+    overflow-x: auto;
+}
+
+.doneButton {
+    width: auto;
+}
