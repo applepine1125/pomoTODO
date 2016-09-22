@@ -2,7 +2,6 @@ var tasklist = [];
 
 /* uniqId:はautoincrementするIDの最大値を保存 */
 
-// $(function() {
 function init() {
     if (!localStorage.getItem('uniqId')) {
         localStorage.setItem('uniqId', 0);
@@ -139,7 +138,7 @@ function queryTasks() {
         }
     }
 }
-// });
+
 $(".button").click(function() {
     $(this).blur();
 });

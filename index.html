@@ -12,6 +12,7 @@
     <canvas id="Doughnut" width="270" height="270" margin=auto></canvas>
 
     <div class="timer" data-minutes-left="25">
+        <!-- <div class="timer" data-seconds-left="5"> -->
         <!-- <div class="hours">00:</div> -->
         <div class="minutes">25:</div>
         <div class="seconds">00</div>
@@ -27,6 +28,8 @@
         <input type="text" id="taskName" />
         <input type="button" value="+" id="btn-add-task" class="button is-mid is-outlined" />
         <input type="button" value="削除" id="btn-clear-task" />
+        <!-- <button id="sound">効果音</button> -->
+
     </div>
 
     <hr/>
@@ -42,6 +45,8 @@
             </tbody>
         </table>
     </div>
+
+    <audio id="audio_play" src="sounds/bell_ring.mp3" />
 
     <script src="js/jquery-3.1.0.min.js"></script>
     <script src="js/jquery_after.js"></script>
