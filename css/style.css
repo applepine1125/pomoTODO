@@ -1,3 +1,8 @@
+canvas {
+  width: 100px;
+    height: 100px;
+}
+
 .hours {
     float: left;
     font-size: 80pt;

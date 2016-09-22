@@ -143,3 +143,36 @@ function queryTasks() {
 $(".button").click(function() {
     $(this).blur();
 });
+
+var data = {
+    labels: [
+        "elapsed time",
+        "remaining time",
+    ],
+    datasets: [{
+        data: [1000, 1500],
+        backgroundColor: [
+            "#E1E2E3",
+            "#FF4500",
+        ],
+        hoverBackgroundColor: [
+            "#E5E7EA",
+            "#FF6600",
+        ],
+        borderWidth: [0, 0]
+    }]
+};
+
+var options = {
+    legend: {
+        display: false
+    },
+    cutoutPercentage: 70,
+};
+
+var ctx = document.getElementById("Doughnut").getContext("2d");
+var Doughnut = new Chart(ctx, {
+    type: 'doughnut',
+    data: data,
+    options: options
+});
