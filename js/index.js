@@ -150,7 +150,7 @@ var data = {
         "remaining time",
     ],
     datasets: [{
-        data: [1000, 1500],
+        data: [10, 15],
         backgroundColor: [
             "#E1E2E3",
             "#FF4500",
@@ -164,10 +164,11 @@ var data = {
 };
 
 var options = {
+    responsive: false,
     legend: {
         display: false
     },
-    cutoutPercentage: 70,
+    cutoutPercentage: 90,
 };
 
 var ctx = document.getElementById("Doughnut").getContext("2d");

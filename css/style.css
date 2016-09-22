@@ -1,28 +1,33 @@
 canvas {
-  width: 100px;
-    height: 100px;
+    margin: auto;
 }
 
 .hours {
     float: left;
-    font-size: 80pt;
+    font-size: 60pt;
     margin-left: 5px;
 }
 
 .minutes {
     float: left;
-    font-size: 80pt;
-    margin-left: 5px;
+    font-size: 60pt;
+    /*margin-left: 5px;*/
 }
 
 .seconds {
     float: left;
-    font-size: 80pt;
-    margin-left: 5px;
+    font-size: 60pt;
+    /*margin-left: 5px;*/
 }
 
 .timer {
-    margin: auto;
+    margin-left: 50px;
+    margin-top: -193px;
+    text-align: center;
+}
+
+.timer-button {
+    margin-top: 200px;
     text-align: center;
 }
 
