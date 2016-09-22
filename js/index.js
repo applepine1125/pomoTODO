@@ -150,7 +150,7 @@ var data = {
         "remaining time",
     ],
     datasets: [{
-        data: [10, 15],
+        data: [0, 1500],
         backgroundColor: [
             "#E1E2E3",
             "#FF4500",
@@ -171,9 +171,16 @@ var options = {
     cutoutPercentage: 90,
 };
 
-var ctx = document.getElementById("Doughnut").getContext("2d");
+var ctx = $("#Doughnut")[0].getContext("2d");
 var Doughnut = new Chart(ctx, {
     type: 'doughnut',
     data: data,
     options: options
 });
+
+function doughnutTimerUpdate(remainingTime) {
+    // Doughnut.options.animation=false;
+    Doughnut.data.datasets[0].data[0] = 1500 - remainingTime;
+    Doughnut.data.datasets[0].data[1] = remainingTime;
+    Doughnut.update();
+}

@@ -159,6 +159,7 @@
 
     intervalId = setInterval((function() {
       timeLeft = endTime - this.currentTime();
+      doughnutTimerUpdate(timeLeft);
       // When timer has been idle and only resumed past timeout,
       // then we immediatelly complete the timer.
       if(timeLeft < 0 ){
