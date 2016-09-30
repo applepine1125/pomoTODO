@@ -24,7 +24,7 @@ app.on('ready', function() {
     // メイン画面の表示。ウィンドウの幅、高さを指定できる
     mainWindow = new BrowserWindow({
         width: 300,
-        height: 600,
+        height: 700,
         // resizable: false
     });
     mainWindow.loadURL('file://' + __dirname + '/index.html');

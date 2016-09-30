@@ -1,5 +1,20 @@
+body {
+    padding: 450px 0 0 0;
+}
+
+.timerArea {
+    background-color: #f5f7fa;
+    position: fixed !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    float: left;
+    height: 450px;
+        z-index: 2;
+}
+
 canvas {
-    margin: auto;
+    margin-left: 8px;
 }
 
 .hours {
@@ -21,7 +36,7 @@ canvas {
 }
 
 .timer {
-    margin-left: 50px;
+    margin-left: 43px;
     margin-top: -193px;
     text-align: center;
 }
@@ -45,7 +60,7 @@ canvas {
 
 .todo-add-area {
     font-size: 16pt;
-    margin-left: 5px;
+    margin-left: 7px;
 }
 
 #btn-add-task {

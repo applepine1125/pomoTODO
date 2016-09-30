@@ -9,30 +9,32 @@
 </head>
 
 <body>
-    <canvas id="Doughnut" width="270" height="270" margin=auto></canvas>
+    <div class="timerArea">
+        <canvas id="Doughnut" width="270" height="270" margin=auto></canvas>
 
-    <div class="timer" data-minutes-left="25">
-        <!-- <div class="timer" data-seconds-left="5"> -->
-        <!-- <div class="hours">00:</div> -->
-        <div class="minutes">25:</div>
-        <div class="seconds">00</div>
-        <div class="clearDiv"></div>
+        <div class="timer" data-minutes-left="25">
+            <!-- <div class="timer" data-seconds-left="5"> -->
+            <!-- <div class="hours">00:</div> -->
+            <div class="minutes">25:</div>
+            <div class="seconds">00</div>
+            <div class="clearDiv"></div>
+        </div>
+
+        <div class="timer-button">
+            <input type="button" value="Timer Start" class="button is-large timer-start" />
+        </div>
+
+        <div class="todo-add-area">
+            <br/>
+            <input type="text" id="taskName" />
+            <input type="button" value="+" id="btn-add-task" class="button is-mid is-outlined" />
+            <!-- <input type="button" value="delete" id="btn-clear-task" /> -->
+            <!-- <button id="sound">timeUpGong</button> -->
+
+        </div>
+        <hr/>
     </div>
 
-    <div class="timer-button">
-        <input type="button" value="Timer Start" class="button is-large timer-start" />
-    </div>
-
-    <div class="todo-add-area">
-        <br/>
-        <input type="text" id="taskName" />
-        <input type="button" value="+" id="btn-add-task" class="button is-mid is-outlined" />
-        <!-- <input type="button" value="delete" id="btn-clear-task" /> -->
-        <!-- <button id="sound">timeUpGong</button> -->
-
-    </div>
-
-    <hr/>
 
     <div>
         <table id="tbl-todo">
