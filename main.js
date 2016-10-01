@@ -1,35 +1,79 @@
 'use strict';
 
-// Electronのモジュール
-const electron = require("electron");
+// module of Electron
+const {
+    electron,
+    app,
+    BrowserWindow,
+    Menu
+} = require("electron");
 
-// アプリケーションをコントロールするモジュール
-const app = electron.app;
+// module of controll app
+// const app = electron.app;
 
-// ウィンドウを作成するモジュール
-const BrowserWindow = electron.BrowserWindow;
+// module of create window
+// const BrowserWindow = electron.BrowserWindow;
 
-// メインウィンドウはGCされないようにグローバル宣言
 let mainWindow;
+let aboutWindow;
 
-// 全てのウィンドウが閉じたら終了
+// quit function
 app.on('window-all-closed', function() {
     if (process.platform != 'darwin') {
         app.quit();
     }
 });
 
-// Electronの初期化完了後に実行
+// show icon on menu bar
+// var Tray = require('tray');
+// var appIcon = new Tray(__dirname + '/icons/pomoTODO_icon24x24black.png');
+
+// setting app menu
+function initApplicationMenu() {
+    const menu = Menu.buildFromTemplate([{
+        label: 'pomoTODO',
+        submenu: [{
+            label: 'About',
+            click: function() {
+                aboutWindow = new BrowserWindow({
+                    width: 300,
+                    height: 200,
+                    resizable: false
+                });
+                aboutWindow.loadURL('file://' + __dirname + '/about.html');
+            }
+        }, {
+            label: 'Quit',
+            accelerator: 'Command+Q',
+            click: function() {
+                app.quit();
+            }
+        }]
+    }, {
+        label: 'View',
+        submenu: [{
+            label: 'Reload',
+            accelerator: 'Command+R',
+            click: function() {
+                mainWindow.reload();
+            }
+        }]
+    }]);
+    Menu.setApplicationMenu(menu);
+}
+
+// Electron ready function
 app.on('ready', function() {
-    // メイン画面の表示。ウィンドウの幅、高さを指定できる
     mainWindow = new BrowserWindow({
         width: 300,
-        height: 700,
-        // resizable: false
+        height: 600,
+        resizable: false
     });
     mainWindow.loadURL('file://' + __dirname + '/index.html');
 
-    // ウィンドウが閉じられたらアプリも終了
+    initApplicationMenu();
+
+    // when all window closed, quit app.
     mainWindow.on('closed', function() {
         mainWindow = null;
     });
