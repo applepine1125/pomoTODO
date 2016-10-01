@@ -8,11 +8,31 @@
     <title>PomoTODO</title>
 </head>
 
-<body style="text-align:center">
-  <img src="icons/pomoTODO" alt="">
-    <h1 style="font-size:20pt">pomoTODO</h1>
-    <p style="margin-bottom:10px">This is pomodoro timer application. </p>
-     Github: <a href="https://github.com/applepine1125/pomoTODO">https://github.com/applepine1125/pomoTODO</a>
+<body class="aboutWindow">
+    <img src="img/pomoTODO_logo.png" alt="icon" width="auto" height="40" />
+    <p class="overview">
+        This is pomodoro timer and todo App.
+    </p>
+    <p>
+        <a href="https://github.com/applepine1125/pomoTODO">
+            <img class="githubLink" src="img/github_icon_blue.png" alt="github" width="50" height="auto" />
+        </a>
+    </p>
+
+
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="js/jquery_after.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('.githubLink').hover(function() {
+                $(this).attr("src", "./img/github_icon_gray.png");
+            }, function() {
+                if (!$(this).hasClass('currentPage')) {
+                    $(this).attr("src", "./img/github_icon_blue.png");
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

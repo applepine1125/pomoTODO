@@ -1,5 +1,5 @@
-body .mainWindow {
-    padding: 450px 0 0 0;
+body.mainWindow {
+    padding: 450px 0 0;
 }
 
 .timerArea {
@@ -10,7 +10,7 @@ body .mainWindow {
     left: 0;
     float: left;
     height: 450px;
-        z-index: 2;
+    z-index: 2;
 }
 
 canvas {
@@ -94,4 +94,13 @@ table {
 
 .doneButton {
     width: auto;
+}
+
+.aboutWindow {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.overview {
+    margin: 10px 0 20px;
 }
